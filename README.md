@@ -111,9 +111,9 @@ Edmonds, J., & Reilly, J. (1983). A long-term global energy-economic model of ca
 ### Output Data
 <!-------------------------->
 
-[1] Khan Zarrar, Vernon Chris, Wild Thomas, and Zhao Mengqi. (2020). Xanthos - Output Data (Version xanthos v2.3.1) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4422095
+[1] Khan, Zarrar, Vernon, Chris, Wild, Thomas, and Zhao, Mengqi. (2020). **Xanthos** - Output Data (Version xanthos v2.3.1) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4422095
 
-[2] GCAM-LAC v5.3 output to be added.
+[2] Zhao, Mengqi, Wild, Thomas, Khan, Zarrar, and Yarlagadda, Brinda. (2022). **GCAM-LAC v5.3-stash** Output Data (GCAM-LAC v5.3-stash) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.6226684
 
 [3] Demeter output to be added.
 
@@ -244,20 +244,26 @@ We provide codes to post-process `pDSSAT` outputs and create agriculture yield X
 
 ***Pre-requirements***
 
-  * Download `Xanthos v2.4.0` from http://doi.org/10.5281/zenodo.4728991, or clone `Xanthos` to your desired location
+  * (Optional) Install PyCharm Professional version https://www.jetbrains.com/pycharm/download/#section=windows
+  * Install Python 2.7 and Python 3.8 https://www.python.org/downloads/
+  
+  * Download `Xanthos v2.4.0` directly from http://doi.org/10.5281/zenodo.4728991, or clone `Xanthos v2.4.0`  to your desired location
   ```
   git clone https://github.com/JGCRI/xanthos.git --branch v2.4.0 Xanthos --single-branch
   ```
-  * Download `Demeter v1.1.0` directly from http://doi.org/10.5281/zenodo.3234948, or clone `Demeter` to your desired location 
+  Then, download `xanthos` example folder from **DOI to be added** to xanthos folder you just downloaded/cloned
+  
+  * Download `Demeter v1.1.0` directly from **DOI to be added**, or clone Demeter to your desired location and checkout the correct branch/tags 'v1.1.0-wild20201'
   ```
-  git clone https://github.com/JGCRI/demeter.git --branch Demeter v1.1.0 --single-branch
+  git clone https://github.com/mengqi-z/demeter.git
+  git checkout v1.1.0-wild2021-ColombiaEWL
   ```
-  * Download `Tethys` directly from http://doi.org/10.5281/zenodo.3234939, or clone `Tethys` to your desired location 
+  * Download Tethys directly from **DOI to be added**, or clone Tethys to your desired location and checkout the correct branch 'v1.2.0-wild2021' 
   ```
-  git clone https://github.com/JGCRI/tethys.git --branch Tethys v1.2.0 --single-branch
+  git clone https://github.com/mengqi-z/tethys.git
+  git checkout v1.2.0-wild2021-ColombiaEWL
   ```
-  * (Optional) Install PyCharm Professional version https://www.jetbrains.com/pycharm/download/#section=windows
-  * Install Python 2.7 and Python 3.8 https://www.python.org/downloads/
+
   
 **Note:* We will refer all the model folders to 'xanthos/', 'demeter/', and 'tethys/' in the following instructions. If you choose to download models directly from provided DOI links instead of cloning, please change each of the downloaded folder name to 'xanthos', 'demeter', and 'tethys'.
 
@@ -269,10 +275,10 @@ python setup.py install
 ```
 
 
-**Note:* More details of setting up Python using PyCharm for `Xanthos`, `Demeter`, and `Tethys` can be found in this [PyCharm setup tutorial](docs/Python_setup_for_xanthos_demeter_tethys.md). You can also go to Github page for each model listed in [Contributing Models](#contributing-models) for more information.
+**Note:* More details of setting up Python using PyCharm for `Xanthos`, `Demeter`, and `Tethys` can be found in this [PyCharm setup tutorial](docs/Python_setup_for_xanthos_demeter_tethys.md). You can also go to Github page for each model listed in [Contributing Modeling Software](#contributing-modeling-software) for more information.
 
 ***File Replacement***\
-For downloaded models from DOI links provided in [Contributing Models](#contributing-models) section, most of the input dataset in terms of a single GCM/RCP scenario (i.e., MIROC-ESM-CHEM forced by RCP 6.0) selected in the Argentina study is included, except for Xanthos due to large size of the dataset. Follow the steps below to add data into the downloaded xanthos folder.
+For downloaded models from DOI links provided in [Contributing Modeling Software](#contributing-modeling-software) section, most of the input dataset in terms of a single GCM/RCP scenario (i.e., GFDL-ESM2M forced by RCP 2.6) selected in the Argentina study is included, except for Xanthos due to large size of the dataset. Follow the steps below to add data into the downloaded xanthos folder.
 
   * Unzip historical climate data xanthos/example/input/climate/watch+wfdei.zip
   * Download projected climate data for 5 GCMs in [temporary Google Drive link](https://drive.google.com/drive/folders/1gLK1uAHsGRGolKg1Y0896QZzB9AD8OiE?usp=sharing). Move 5 downloaded data folders under the directory xanthos/example/input/climate/. **This is a temporary link from google drive and only people with permission will be able to download. We will replace the temporary link with DataHub DOI once it is created.*
@@ -307,7 +313,7 @@ Check each file listed in [Table 5](#table5) and modify every directory within t
 
 <a name="figure1"></a>
 
-<p align="center"> <img src="doc/FIG1.png", width = '700'></p>
+<p align="center"> <img src="docs/FIG1.png", width = '700'></p>
 
 **Figure 1.** The multi-model, multi-scale, multi-sector analysis framework.
 <br />
